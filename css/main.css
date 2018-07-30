@@ -20,14 +20,7 @@ header a {
   background-color: #f7b617;
 }
 
-#app-div-web {
-  border-top: solid 1px white;
-  border-right: solid 1px white;
-  border-bottom: solid 1px white;
-}
-
 #app-div-mobile {
-  border: solid 1px white;
   height: 70vh;
 }
 
@@ -42,15 +35,10 @@ header a {
 
 #viaja .form-control {
   background-color: transparent;
-  border: solid 1px white;
 }
 
 #viaja .form-control::placeholder {
   color: white;
-}
-
-#google-map-div {
-  border: solid 1px white;
 }
 
 #google-map {

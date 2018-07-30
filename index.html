@@ -37,25 +37,25 @@
   </header>
   <main class="container-fluid">
     <section id="start" class="row justify-content-end align-items-center">
-      <div class="v-web bg-orange text-white flex-column p-5">
+      <div class="v-web bg-orange flex-column p-5">
         <h2>Disfruta del viaje</h2>
         <h2 class="mb-4">Eres dueño de tu tiempo</h2>
         <h6 class="mb-4">Viaja con <img src="assets/images/logoBlanco.png" class="m-2"></h6>
-        <input type="submit" class="btn btn-light btn-md col-5" value="REGÍSTRATE">
+        <input type="submit" class="btn btn-light btn-md col-5" data-toggle="modal" data-target="#registro-modal" value="REGÍSTRATE">
         <div class="row mt-4 mb-4">
           <hr class="border-white col-2"><div>O bien</div><hr class="border-white col-2">
         </div>
         <input type="submit" class="btn btn-light btn-md col-8" value="Conviértete en un condutor">        
       </div>
       <!-- Versão mobile -->
-      <div class="v-mobile bg-orange text-white p-5">
+      <div class="v-mobile bg-orange p-5">
         <h2 class="mb-4">Comienza a viajar</h2>
         <h6 class="mb-4">con <img src="assets/images/logoBlanco.png" class="m-2"></h6>
         <input type="submit" class="btn btn-light btn-md" value="Descarga el app">
       </div>
     </section>
-    <section id="app" class="row bg-orange text-white justify-content-start align-items-center pt-5 pb-5">
-      <div id="app-div-web" class="v-web justify-content-around col-10 p-4">
+    <section id="app" class="row bg-orange justify-content-start align-items-center pt-5 pb-5">
+      <div class="v-web border border-left-0 border-white justify-content-around col-10 p-4">
         <img class="col-4 mr-5" src="assets/images/iPhone6Plus.png">
         <div class="col-5 p-4">
           <h2 class="mb-4">Descarga la nueva app</h2>
@@ -63,7 +63,7 @@
           <h4 class="mb-4">Con solo trocar un bóton, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a donde ir.</h4>
         </div>
       </div>
-      <div id="app-div-mobile" class="v-mobile text-center m-4 p-4">
+      <div id="app-div-mobile" class="v-mobile border border-white text-center m-4 p-4">
         <h3 class="mb-4">La nueva app</h3>
         <img class="col-7" src="assets/images/iPhone6Plus.png">
       </div>
@@ -78,26 +78,26 @@
         </div>
       </div>
     </section>
-    <section id="viaja" class="row bg-orange text-white align-items-center pt-5 pb-5">
+    <section id="viaja" class="row bg-orange align-items-center pt-5 pb-5">
       <form class="d-flex flex-column align-items-center col-md-5 mb-4">
         <h2 class="mb-4">Tarifas</h2>
         <h5 class="mb-5">Consulta las tarifas LabCar aquí</h5>
         <div class="col-md-10">
           <img src="assets/images/shape.png" class="d-inline mr-3">
-          <input class="d-inline mb-4 form-control text-white col-10" type="text" placeholder="Ingrese su punto de partida">
+          <input class="d-inline mb-4 form-control border border-white col-10" type="text" placeholder="Ingrese su punto de partida">
         </div>
         <div class="col-md-10">
           <img src="assets/images/shape2.png" class="d-inline mr-3">
-          <input class="d-inline mb-5 form-control text-white col-10" type="text" placeholder="Ingrese su destino">
+          <input class="d-inline mb-5 form-control border border-white col-10" type="text" placeholder="Ingrese su destino">
         </div>
         <input class="btn btn-light btn-md align-self-center" type="submit" value="TRAZAR RUTA!">
       </form>
-      <div id="google-map-div" class="col-md-5 col-sm-9 p-2">
+      <div class="border border-white col-md-5 col-sm-9 p-2">
         <div id="google-map"></div>
       </div>
     </section>
   </main>
-  <footer class="d-flex d-inline text-white p-4">
+  <footer class="d-flex d-inline p-4">
     <section id="footer" class="container-fluid d-flex flex-column p-md-5">
       <div class="row w-25"><img src="assets/images/logoBlanco.png"></div>
       <hr class="row border-white">
@@ -180,13 +180,49 @@
               </div>
               <input type="text" class="form-control" placeholder="Password">
             </div>
-            <input class="btn btn-warning text-white w-25 mt-4" type="submit" value="LOGING">
+            <input class="btn btn-warning w-25 mt-4" type="submit" value="LOGING">
             <p class="mt-4">Forgot password? <a class="text-danger" href="#">Click here</a></p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Modal Registro -->
+  <div class="modal fade" id="registro-modal" tabindex="-1" role="dialog" aria-labelledby="registro-modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-secondary">
+          <div class="modal-header border-0">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+          <div class="modal-body pl-5 pr-5">
+            <input class="btn btn-dark w-100 text-white" type="submit" value="Ya tienes una cuenta?">
+            <p class="text-center mt-4">O CREA UNA CUENTA NUEVA</p>
+            <div class="d-flex justify-content-between mt-4 mb-2">
+              <input type="text" class="form-control col-6" placeholder="Nombre">
+              <input type="text" class="form-control col-6" placeholder="Apellido">
+            </div>
+            <input type="text" class="form-control mb-2" placeholder="Correo Eletronico: ejemplo@correo.mx">
+            <input type="text" class="form-control mb-2" placeholder="Teléfono">
+            <input type="text" class="form-control mb-2" placeholder="Contraseña">
+            <input type="text" class="form-control mb-2" placeholder="Ciudad">
+            <input type="text" class="form-control mb-4" placeholder="(Opcional) Código de invitacion">
+            <div class="dropdown mb-4">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Como te enteraste de nosotros?
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Internet</button>
+                <button class="dropdown-item" type="button">TV</button>
+                <button class="dropdown-item" type="button">Indicación</button>
+              </div>
+            </div>
+            <input class="btn btn-info w-100 text-white" type="submit" value="ENVIAR">
+          </div>
+        </div>
+      </div>
+    </div>
   <script src="js/app.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqx7A_aV5vWShVpDde6o-oeOgMCW8HsBU&callback=myMap"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
