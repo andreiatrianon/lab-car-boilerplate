@@ -20,10 +20,6 @@ header a {
   background-color: #f7b617;
 }
 
-#app-div-mobile {
-  height: 70vh;
-}
-
 #conduce {
   height: 80vh;
   background: url("../assets/images/conduce.jpg") center center / cover no-repeat;
